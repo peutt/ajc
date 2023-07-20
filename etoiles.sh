@@ -1,6 +1,6 @@
 #! /bin/sh
 texte="$@"
-nb_caract=${#texte}
+nb_caract=$(( ${#texte} / 2))
 encadrement="* "
 encadrer_stars() {
 	for i in $(seq $nb_caract);do
@@ -10,10 +10,8 @@ encadrer_stars() {
 	
 	encadrement="$encadrement* "
 	encadrement="$encadrement$texte"
-	for i in $(seq $nb_caract);do
-	encadrement="$encadrement "
-	done
-	encadrement="$encadrement*\n"
+	
+	encadrement="$encadrement *\n"
 	
 	encadrement="$encadrement* "
 	for i in $(seq $nb_caract);do
