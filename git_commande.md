@@ -25,6 +25,7 @@
 - `git remote add <nom_remote> <URL>` : Ajoute un nouveau dépôt distant sous le nom spécifié.
 - `git branch` : Affiche la liste des branches du dépôt. L'astérisque (\*) indique la branche actuelle.
 - `git checkout <nom_branche>` : Permet de changer de branche.
+- `git checkout c232a -b autrebranche`: Permet de crée la branche 'autrebranche' à partir du commit 'c232a' et se positionne dessus
 - `git merge <branche_source>` : Fusionne la branche spécifiée dans la branche actuelle.
 
 ## Commandes de Comparaison
