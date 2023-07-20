@@ -13,3 +13,4 @@ j'en rajoute un peu
 =======
 
 >>>>>>> fb0ade7bbcbaed7ff8d7784166ccbfc6ec1d802c
+<<<<<< gilles vs le reste du monde >>>>>>>
