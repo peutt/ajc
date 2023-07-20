@@ -25,6 +25,7 @@
 - `git remote add <nom_remote> <URL>` : Ajoute un nouveau dépôt distant sous le nom spécifié.
 - `git branch` : Affiche la liste des branches du dépôt. L'astérisque (\*) indique la branche actuelle.
 - `git checkout <nom_branche>` : Permet de changer de branche.
+- `git checkout c232a -b autrebranche`: Permet de crée la branche 'autrebranche' à partir du commit 'c232a' et se positionne dessus
 - `git merge <branche_source>` : Fusionne la branche spécifiée dans la branche actuelle.
 
 ## Commandes de Comparaison
@@ -38,3 +39,8 @@
 - `git reset --hard <commit>` : Réinitialise l'index et le répertoire de travail au commit spécifié.
 - `git rm <fichier>` : Supprime un fichier de Git et du répertoire de travail.
 - `git stash` : Met de côté les modifications locales temporaires dans une pile (stash).
+
+## Gestion de conflit pour les fichier binaire
+
+- `git checkout --their <fichierBinare>` : Garde le fichier binaire distant
+- `git checkout --our <fichierBinaire>` : Garde le fichier binaire local
