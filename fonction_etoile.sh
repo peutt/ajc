@@ -14,7 +14,7 @@ echo ${*}\*
 #Fonction numero 3 : Encadre le texte par une rangée d\'étoiles en haut
 fonction3(){
 texte=$*
-nombre_etoiles=(echo $*|wc -m`)
+nombre_etoiles=`echo $*|wc -m`
 
 for var in `seq 2 $nombre_etoiles`
 do
