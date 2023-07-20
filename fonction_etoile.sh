@@ -1,6 +1,8 @@
 #! /bin/sh
 #auteur raphael de oliveira
 
+#Version 2.0
+
 
 #definition des fonction
 #*************************************
@@ -11,19 +13,23 @@ echo \*${*}
 fonction2(){
 echo ${*}\*
 }
-#Fonction numero 3 : Encadre le texte par une rangée d\'étoiles en haut
-fonction3(){
-texte=$*
-nombre_etoiles=(echo $*|wc -m`)
+fonction3() {
+    texte="$*"
+    nombre_etoiles=$(echo -n "$texte" | wc -c)
 
-for var in `seq 2 $nombre_etoiles`
-do
-printf \*
-done
+    for var in $(seq 1 "$nombre_etoiles")
+    do
+        printf "*"
+    done
 
-printf "\n"
-printf "$texte"
-printf "\n"
+    printf "\n%s\n" "$texte"
+
+    for var in $(seq 1 "$nombre_etoiles")
+    do
+        printf "*"
+    done
+
+    printf "\n"
 }
 #Fonction numero 4 : Encadre le texte par une rangée d\'étoiles en bas
 fonction4(){
