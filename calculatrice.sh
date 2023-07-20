@@ -30,4 +30,4 @@ echo `expr $number1 / $number2`
 *)
 echo "error"
 ;;
-
+esac
