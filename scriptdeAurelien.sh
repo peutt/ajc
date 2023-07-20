@@ -6,4 +6,5 @@ read chiffre
 echo $chiffre
 
 
-echo "Perdu"
+# Rajout JP $chiffre
+echo "Perdu" $chiffre
