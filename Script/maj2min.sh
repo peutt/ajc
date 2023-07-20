@@ -1,5 +1,5 @@
 #! /bin/sh
-
+# Mais quel est l'auteur de ce script ?
 for file in $*
 	do
 	temp="$(echo $file | tr A-Z a-z)"
@@ -9,3 +9,5 @@ for file in $*
 	fi
 	done
 echo "FINI"
+
+#commentaire pour essayer de géénrer du conflit git
