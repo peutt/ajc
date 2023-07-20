@@ -25,7 +25,7 @@ echo `expr $number1 \* $number2`
 4)
 read -p "Veuillez saisir un premier nombre : " number1   
 read -p "Veuillez saisir un deuxième nombre : " number2
-echo `expr $number1 / $number2`
+echo $(($number1 / $number2))','$(($number1 % $number2))
 ;;
 *)
 echo "error"
