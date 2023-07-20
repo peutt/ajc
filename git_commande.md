@@ -41,5 +41,5 @@
 
 ## Gestion de confli pour les fichier binaire
 
--`git checkout --their <fichierBinare>`
--`git checkout --our <fichierBinaire>`
+- `git checkout --their <fichierBinare>`
+- `git checkout --our <fichierBinaire>`
