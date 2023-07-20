@@ -39,7 +39,7 @@
 - `git rm <fichier>` : Supprime un fichier de Git et du répertoire de travail.
 - `git stash` : Met de côté les modifications locales temporaires dans une pile (stash).
 
-## Gestion de confli pour les fichier binaire
+## Gestion de conflit pour les fichier binaire
 
 - `git checkout --their <fichierBinare>`
 - `git checkout --our <fichierBinaire>`
