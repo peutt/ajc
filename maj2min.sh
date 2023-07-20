@@ -3,8 +3,8 @@ file="$1"
 
 for file in "$@"
 do 
-#maj=$(echo "$file" | tr '[:lower:]' '[:upper:]')
-maj=$(echo "$file" | tr '[:upper:]' '[:lower:]')
+maj=$(echo "$file" | tr '[:lower:]' '[:upper:]')
+#maj=$(echo "$file" | tr '[:upper:]' '[:lower:]')
 
 if [ -e "$maj" ]
 then
