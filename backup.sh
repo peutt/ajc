@@ -1,41 +1,16 @@
-<<<<<<< HEAD
-#! /bin/sh
-
-echo "Menu"
-echo "1 - Effectuer une sauvegarde"
-echo "2 - Afficher la liste des sauvegardes"
-echo "3 - Supprimer les anciennes sauvegardes à l'exception de la dernière"
-
-read -p "Veuillez choisir une option : " choice
-
-case $choice in 
-
-"1") $(tar zvcf ./backups/backup_$(date +%Y-%m-%d-%T).tar.gz ./files);;
-"2") ls -la ./backups;;
-"3") count=$(ls -la ./backups/backup* | wc -l) 
-for backup in backups/*
-do
-let counter++
-if [ $counter -lt $count ] 
-then
-rm $backup
-fi
-done
-;;
-esac
-=======
 #!/bin/sh
 backup_directory="backup_folder"
+repertoireAjc=$PWD
 # Créer le répertoire de sauvegarde s'il n'existe pas
 if cd /tmp && [ ! -d "$backup_directory" ]; then
-    mkdir "$backup_directory"
+    mkdir "$backup_directory" && cd $repertoireAjc
 fi
 # Fonction pour effectuer une sauvegarde
 perform_backup() {
     date_stamp=$(date +"%Y-%m-%d-%H-%M-%S")
     backup_file="backup-$date_stamp.tar.gz"
-    fileListe=$(ls ./ajc)
-    cd ./ajc
+    fileListe=$(ls $repertoireAjc)
+    cd $repertoireAjc
     tar -czf "/tmp/$backup_directory/$backup_file" $fileListe
 }
 # Fonction pour afficher la liste des backups
@@ -44,7 +19,7 @@ list_backups() {
 }
 # Fonction pour supprimer les anciens backups sauf le dernier
 delete_old_backups() {
-    cd "/tmp/$backup_directory" && (ls -t | tail -n +2 | xargs rm -f) && cd ./ajc
+    cd "/tmp/$backup_directory" && (ls -t | tail -n +2 | xargs rm -f) && cd $repertoireAjc
 }
 
 # Menu principal
@@ -64,4 +39,3 @@ while true; do
     esac
     echo ""
 done
->>>>>>> 20e0c28e7f577909eee1a0c405393f73f79f8561
