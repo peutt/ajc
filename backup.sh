@@ -1,15 +1,16 @@
 #!/bin/sh
 backup_directory="backup_folder"
+repertoireAjc=$PWD
 # Créer le répertoire de sauvegarde s'il n'existe pas
 if cd /tmp && [ ! -d "$backup_directory" ]; then
-    mkdir "$backup_directory"
+    mkdir "$backup_directory" && cd $repertoireAjc
 fi
 # Fonction pour effectuer une sauvegarde
 perform_backup() {
     date_stamp=$(date +"%Y-%m-%d-%H-%M-%S")
     backup_file="backup-$date_stamp.tar.gz"
-    fileListe=$(ls ./ajc)
-    cd ./ajc
+    fileListe=$(ls $repertoireAjc)
+    cd $repertoireAjc
     tar -czf "/tmp/$backup_directory/$backup_file" $fileListe
 }
 # Fonction pour afficher la liste des backups
@@ -18,7 +19,7 @@ list_backups() {
 }
 # Fonction pour supprimer les anciens backups sauf le dernier
 delete_old_backups() {
-    cd "/tmp/$backup_directory" && (ls -t | tail -n +2 | xargs rm -f) && cd ./ajc
+    cd "/tmp/$backup_directory" && (ls -t | tail -n +2 | xargs rm -f) && cd $repertoireAjc
 }
 
 # Menu principal
