@@ -1,7 +1,7 @@
 #!/bin/sh
 backup_directory="backup_folder"
 # Créer le répertoire de sauvegarde s'il n'existe pas
-if cd /tmp && [ ! -d "$backup_directory" ] && cd ./ajc; then
+if cd /tmp && [ ! -d "$backup_directory" ]; then
     mkdir "$backup_directory"
 fi
 # Fonction pour effectuer une sauvegarde
