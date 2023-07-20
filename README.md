@@ -1,2 +1,3 @@
 # ajc
 C'est très important de lire ce fichier ...
+Voir même de le lire deux fois pour être sûr.
