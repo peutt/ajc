@@ -9,3 +9,5 @@ for file in $*
 	fi
 	done
 echo "FINI"
+
+#commentaire pour essayer de géénrer du conflit git

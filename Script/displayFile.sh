@@ -10,5 +10,5 @@ for i in $fileNameList;do
 	echo " NOM :" $fileName ', TYPE :' $fileType ', TAILLE :' $fileSize
 done
 
-
+#commentaires pour essayer de générer du conflit git
 
