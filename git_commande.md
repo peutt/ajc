@@ -41,5 +41,5 @@
 
 ## Gestion de conflit pour les fichier binaire
 
-- `git checkout --their <fichierBinare>`
-- `git checkout --our <fichierBinaire>`
+- `git checkout --their <fichierBinare>` : Garde le fichier binaire distant
+- `git checkout --our <fichierBinaire>` : Garde le fichier binaire local
