@@ -1,6 +1,8 @@
 #! /bin/sh
 #auteur raphael de oliveira
 
+#Version 2.0
+
 
 #definition des fonction
 #*************************************
