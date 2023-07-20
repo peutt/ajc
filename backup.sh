@@ -1,15 +1,15 @@
 #!/bin/sh
 backup_directory="backup_folder"
 # Créer le répertoire de sauvegarde s'il n'existe pas
-if cd /tmp && [ ! -d "$backup_directory" ] && cd /mnt/c/Users/aymer/Desktop/ajc; then
+if cd /tmp && [ ! -d "$backup_directory" ] && cd ./ajc; then
     mkdir "$backup_directory"
 fi
 # Fonction pour effectuer une sauvegarde
 perform_backup() {
     date_stamp=$(date +"%Y-%m-%d-%H-%M-%S")
     backup_file="backup-$date_stamp.tar.gz"
-    fileListe=$(ls /mnt/c/Users/aymer/Desktop/ajc)
-    cd /mnt/c/Users/aymer/Desktop/ajc
+    fileListe=$(ls ./ajc)
+    cd ./ajc
     tar -czf "/tmp/$backup_directory/$backup_file" $fileListe
 }
 # Fonction pour afficher la liste des backups
@@ -18,7 +18,7 @@ list_backups() {
 }
 # Fonction pour supprimer les anciens backups sauf le dernier
 delete_old_backups() {
-    cd "/tmp/$backup_directory" && (ls -t | tail -n +2 | xargs rm -f) && cd /mnt/c/Users/aymer/Desktop/ajc
+    cd "/tmp/$backup_directory" && (ls -t | tail -n +2 | xargs rm -f) && cd ./ajc
 }
 
 # Menu principal
