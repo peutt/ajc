@@ -2,7 +2,7 @@
 #auteur raphael de oliveira
 
 #Version 2.0
-#2eme commit sur la nouvelle branche branch
+#2eme commit sur la branche master
 
 
 #definition des fonction
