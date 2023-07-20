@@ -1,2 +1,2 @@
 # ajc
-Les conventions sont explicités dans le doc convention.md
+Les conventions de documentation sont explicités dans le document conventions.md
