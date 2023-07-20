@@ -38,3 +38,8 @@
 - `git reset --hard <commit>` : Réinitialise l'index et le répertoire de travail au commit spécifié.
 - `git rm <fichier>` : Supprime un fichier de Git et du répertoire de travail.
 - `git stash` : Met de côté les modifications locales temporaires dans une pile (stash).
+
+## Gestion de conflit pour les fichier binaire
+
+- `git checkout --their <fichierBinare>` : Garde le fichier binaire distant
+- `git checkout --our <fichierBinaire>` : Garde le fichier binaire local
