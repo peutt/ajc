@@ -1,5 +1,5 @@
 #! /bin/sh
-
+# Mais quel est l'auteur de ce script ?
 for file in $*
 	do
 	temp="$(echo $file | tr A-Z a-z)"
