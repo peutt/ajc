@@ -11,23 +11,19 @@ echo \*${*}
 fonction2(){
 echo ${*}\*
 }
-fonction3() {
-    texte="$*"
-    nombre_etoiles=$(echo -n "$texte" | wc -c)
+#Fonction numero 3 : Encadre le texte par une rangée d\'étoiles en haut
+fonction3(){
+texte=$*
+nombre_etoiles=`echo $*|wc -m`
 
-    for var in $(seq 1 "$nombre_etoiles")
-    do
-        printf "*"
-    done
+for var in `seq 2 $nombre_etoiles`
+do
+printf \*
+done
 
-    printf "\n%s\n" "$texte"
-
-    for var in $(seq 1 "$nombre_etoiles")
-    do
-        printf "*"
-    done
-
-    printf "\n"
+printf "\n"
+printf "$texte"
+printf "\n"
 }
 #Fonction numero 4 : Encadre le texte par une rangée d\'étoiles en bas
 fonction4(){

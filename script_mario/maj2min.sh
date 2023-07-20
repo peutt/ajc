@@ -1,5 +1,4 @@
 #!/bin/sh
-#AJout de commentaire : fichier qui remplace majuscule en minuscule
 file="$1"
 
 for file in "$@"
@@ -15,3 +14,4 @@ else
 mv "$file" "$maj"
 fi
 done
+
